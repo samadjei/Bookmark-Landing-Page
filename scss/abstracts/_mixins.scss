@@ -1,0 +1,15 @@
+// Breakpoints
+$breakpoints: (
+	// Phones
+		small: 37.5rem,
+	// Tablet
+		medium: 76.8rem
+);
+
+@mixin breakpoint($size) {
+	$breakpoint-value: map-get($breakpoints, $size);
+
+	@media screen and (max-width: $breakpoint-value) {
+		@content;
+	}
+}

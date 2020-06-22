@@ -1,31 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,600&display=swap');
-
 *,
 *::after,
 *::before {
 	margin: 0;
 	padding: 0;
-	/* automatically inherit box-sizing from the body element */
-	/* box-sizing: inherit; */
 	box-sizing: border-box;
 }
 
-/* setting the root font-size  */
 html {
 	box-sizing: border-box;
-	/* change to 1px so that we know that 1rem will equal 10px */
-	/* change the 10px to a percentage which will translate to the percentage given by the browser */
-	/* 10/16*100 */
-	/* this method is used when a user decides to adjust the font size on the browser  */
 	font-size: 62.5%;
 }
 
 body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Rubik', sans-serif;
 	background: #fff;
 	color: #000;
 	font-size: 16px;
-	/* line-height: 1.5; */
 }
 
 a {
@@ -48,41 +38,3 @@ img {
 	padding: 0 2rem;
 	overflow: hidden;
 }
-
-// Breakpoints
-$breakpoints: (
-	// Phones
-		small: 37.5rem,
-	// Tablet
-		medium: 76.8rem
-);
-
-@mixin breakpoint($size) {
-	$breakpoint-value: map-get($breakpoints, $size);
-
-	@media screen and (max-width: $breakpoint-value) {
-		@content;
-	}
-}
-
-/*nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ul {
-      display: flex;
-      padding: 0;
-      li {
-        margin-left: 3rem;
-        color: $Very-Dark-Blue;
-        font-size: 1.7rem;
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-  }*/
-
-/* @include breakpoint(medium) {
-      padding: 5.6rem 2.5rem;
-    } */
