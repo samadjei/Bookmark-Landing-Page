@@ -1,5 +1,22 @@
 .hero {
 	margin-top: 13rem;
+	position: relative;
+
+	// &::after {
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	right: 0;
+	// 	width: 80%;
+	// 	height: 65%;
+	// 	border-radius: 300px 0 0 300px;
+	// 	background-color: $Soft-Blue;
+	// 	z-index: -1;
+	// }
+
+	// .container {
+	//   width: 100%;
+	//   padding: 0 16rem;
+	// }
 
 	&__flex {
 		display: flex;
@@ -9,18 +26,32 @@
 
 	&__left {
 		padding: 8rem 0rem;
-    width: 53rem;
-    max-width: 100%;
+		width: 55rem;
+		max-width: 100%;
 
-    // @include breakpoint(medium) {
-    // }
-
-    p {
-      padding-top: 3rem;
-    }
+		p {
+			padding-top: 3rem;
+			padding-right: 1.5rem;
+		}
 	}
 
 	&__btns {
 		margin-top: 5rem;
 	}
+
+	&__right {
+		position: relative;
+	}
+}
+
+.hero-bg {
+  position: absolute;
+  top: 15rem;
+	bottom: 0;
+	right: 0;
+	width: 35%;
+	height: 70%;
+	border-radius: 30rem 0 0 30rem;
+	background-color: $Soft-Blue;
+	z-index: -1;
 }
