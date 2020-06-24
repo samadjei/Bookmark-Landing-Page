@@ -1,9 +1,8 @@
 // Breakpoints
 $breakpoints: (
-	// Phones
-		small: 37.5rem,
-	// Tablet
-		medium: 76.8rem
+	small: 49rem,
+	medium: 89rem,
+	large: 99rem
 );
 
 @mixin breakpoint($size) {

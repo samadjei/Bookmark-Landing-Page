@@ -1,0 +1,18 @@
+.btn {
+	border-radius: 5px;
+	border-radius: none;
+	cursor: pointer;
+	padding: 1.8rem 2.5rem;
+	background: $Soft-Blue;
+}
+
+.btn-blue {
+	color: white;
+}
+
+.btn-white {
+	background: #f7f7f7;
+	color: $Grayish-Blue;
+	margin-left: 1.6rem;
+	box-shadow: 0 10px 10px -5px rgba(57, 81, 221, 0.164);
+}

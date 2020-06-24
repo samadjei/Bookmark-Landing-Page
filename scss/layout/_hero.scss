@@ -1,0 +1,26 @@
+.hero {
+	margin-top: 13rem;
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	&__left {
+		padding: 8rem 0rem;
+    width: 53rem;
+    max-width: 100%;
+
+    // @include breakpoint(medium) {
+    // }
+
+    p {
+      padding-top: 3rem;
+    }
+	}
+
+	&__btns {
+		margin-top: 5rem;
+	}
+}
