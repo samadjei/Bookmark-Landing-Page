@@ -1,0 +1,44 @@
+.extensions {
+	padding-bottom: 24rem;
+
+	&__header {
+		@include contentHeader;
+	}
+
+	&__col {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__columns {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-gap: 2rem;
+		text-align: center;
+		padding: 2.7rem;
+		box-shadow: 5px 5px 10px rgba(57, 81, 221, 0.164);
+		margin-bottom: 5rem;
+		border-radius: 5px;
+		width: 28rem;
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			margin-left: 3.5rem;
+		}
+
+		&:nth-child(2) {
+			margin-bottom: -5rem;
+		}
+
+		&:nth-child(3) {
+			margin-bottom: -14rem;
+		}
+
+		img {
+			margin: auto;
+		}
+	}
+}

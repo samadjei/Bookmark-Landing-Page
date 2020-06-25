@@ -7,11 +7,7 @@
 	}
 
 	&__header {
-		margin: 0 auto;
-		max-width: 100%;
-		width: 55rem;
-		text-align: center;
-		padding-bottom: 7rem;
+		@include contentHeader;
 	}
 
 	&__tabs {
@@ -44,15 +40,10 @@
 	}
 }
 
-.tab-1-content-inner {
-  // display: grid;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-	// grid-template-columns: repeat(2, 1fr);
-	// grid-gap: 2rem;
-	// justify-content: center;
-	// align-items: center;
+.tab-content-inner {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	padding-top: 7rem;
 	padding-bottom: 20rem;
 }
@@ -61,9 +52,19 @@
 	border-bottom: 4px solid $Soft-Red;
 }
 
+// Hide Content initially
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+	display: none;
+}
+
+.show {
+	display: block !important;
+}
 
 .tab-content {
 	text-align: left;
 	max-width: 100%;
-  width: 43rem;
+	width: 43rem;
 }

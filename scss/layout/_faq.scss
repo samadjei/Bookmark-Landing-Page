@@ -1,0 +1,26 @@
+.faq {
+	&__header,
+	&__questions {
+		@include contentHeader;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #e0e0ec;
+		border-bottom: 1px solid #e0e0ec;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-right: 0.5rem;
+	}
+
+	&__text {
+		display: none;
+	}
+}
+
+svg:hover {
+	fill: $Soft-Red;
+	cursor: pointer;
+}

@@ -1,8 +1,8 @@
 // Breakpoints
 $breakpoints: (
-		small: 49rem,
-		medium: 96rem,
-		large: 99rem
+	small: 49rem,
+	medium: 96rem,
+	large: 99rem,
 );
 
 @mixin breakpoint($size) {
@@ -11,4 +11,12 @@ $breakpoints: (
 	@media screen and (max-width: $breakpoint-value) {
 		@content;
 	}
+}
+
+@mixin contentHeader {
+	margin: 0 auto;
+	max-width: 100%;
+	width: 55rem;
+	text-align: center;
+	padding-bottom: 7rem;
 }
