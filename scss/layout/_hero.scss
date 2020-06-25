@@ -2,22 +2,6 @@
 	margin-top: 13rem;
 	position: relative;
 
-	// &::after {
-	// 	position: absolute;
-	// 	bottom: 0;
-	// 	right: 0;
-	// 	width: 80%;
-	// 	height: 65%;
-	// 	border-radius: 300px 0 0 300px;
-	// 	background-color: $Soft-Blue;
-	// 	z-index: -1;
-	// }
-
-	// .container {
-	//   width: 100%;
-	//   padding: 0 16rem;
-	// }
-
 	&__flex {
 		display: flex;
 		justify-content: space-between;
@@ -45,8 +29,8 @@
 }
 
 .hero-bg {
-  position: absolute;
-  top: 15rem;
+	position: absolute;
+	top: 15rem;
 	bottom: 0;
 	right: 0;
 	width: 35%;

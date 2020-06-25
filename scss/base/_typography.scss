@@ -3,24 +3,31 @@ li {
 	letter-spacing: 2px;
 }
 
+h1,
+h2,
+h5 {
+	color: $Very-Dark-Blue;
+}
+
 h1 {
 	font-size: 4.5rem;
-	color: $Very-Dark-Blue;
-  font-family: 'Rubik';
-  font-weight: 500;
+	font-family: 'Rubik';
+	font-weight: 500;
 }
 
 h2 {
-  text-align: center;
-  color: $Very-Dark-Blue;
-  padding-bottom: 3rem;
-  font-size: 2.6rem;
+	padding-bottom: 3rem;
+	font-size: 2.6rem;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 p {
-  color: $Grayish-Blue;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.5;
+	color: $Grayish-Blue;
+	font-weight: 400;
+	font-size: 1.8rem;
+	line-height: 1.5;
 }
-
