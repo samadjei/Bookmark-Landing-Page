@@ -9,11 +9,26 @@
 
 .btn-blue {
 	color: white;
+	transition: all 0.3s ease-out;
+	border: 2px solid $Soft-Blue;
+
+	@include boxShadow;
+
+	&:hover {
+		background: white;
+		color: $Soft-Blue;
+	}
 }
 
 .btn-white {
 	background: #f7f7f7;
-	color: $Grayish-Blue;
+	color: $Very-Dark-Blue;
+	border: 2px solid #f7f7f7;
 	margin-left: 1.6rem;
-	box-shadow: 0 10px 10px -5px rgba(57, 81, 221, 0.164);
+	@include boxShadow;
+
+	&:hover {
+		border: 2px solid $Very-Dark-Blue;
+		background: white;
+	}
 }

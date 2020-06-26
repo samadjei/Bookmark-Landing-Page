@@ -1,7 +1,7 @@
 // Breakpoints
 $breakpoints: (
 	small: 49rem,
-	medium: 96rem,
+	medium: 89rem,
 	large: 99rem,
 );
 
@@ -21,8 +21,21 @@ $breakpoints: (
 	padding-bottom: 7rem;
 }
 
-@mixin flex{
+@mixin flex {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@mixin boxShadow {
+	box-shadow: 0 10px 10px -5px rgba(57, 81, 221, 0.164);
+}
+
+@mixin hover {
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		cursor: pointer;
+		color: red;
+	}
 }
