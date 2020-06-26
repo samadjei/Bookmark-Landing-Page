@@ -20,3 +20,9 @@ $breakpoints: (
 	text-align: center;
 	padding-bottom: 7rem;
 }
+
+@mixin flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

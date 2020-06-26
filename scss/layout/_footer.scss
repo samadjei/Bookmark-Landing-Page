@@ -1,0 +1,33 @@
+.footer {
+  background-color: $Very-Dark-Blue;
+  padding: 4rem 0;
+
+	&__flex {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  &__left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  &__listing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 2rem;
+    &--items {
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+
+  &__right {
+    &--img:last-child {
+      padding-left: 3rem;
+    }
+  }
+}
