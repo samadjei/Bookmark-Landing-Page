@@ -10,17 +10,38 @@
 		<title>Frontend Mentor | Bookmark landing page</title>
 	</head>
 	<body>
-		<div class="container">
-			<header class="menu">
-				<img src="images/logo-bookmark.svg" alt="" />
-				<ul class="menu__list">
-					<li>Features</li>
-					<li>Pricing</li>
-					<li>Contact</li>
-					<li>Login</li>
-				</ul>
-			</header>
-		</div>
+		<header class="header">
+			<div class="overlay"></div>
+			<nav class="container header__flex">
+				<div>
+					<img src="images/logo-bookmark.svg" alt="Logo" />
+				</div>
+				<a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<!-- Main Menu -->
+				<!-- <ul class="header__menu hide-for-mobile">
+					<li class="header__menu--items">Features</li>
+					<li class="header__menu--items">Pricing</li>
+					<li class="header__menu--items">Contact</li>
+					<li class="header__menu--items">Login</li>
+				</ul> -->
+			</nav>
+			<!-- Mobile Menu  -->
+			<div class="header__links hide-for-desktop">
+				<a href="#">Features</a>
+				<a href="#">Pricing</a>
+				<a href="#">Contact</a>
+				<a class="btn btn--mobile" href="#">Login</a>
+				<div class="header__socials">
+					<img class="footer__right--img" src="images/icon-facebook.svg" alt="Facebook icon" />
+					<img class="footer__right--img" src="images/icon-twitter.svg" alt="Twitter icon" />
+				</div>
+			</div>
+		</header>
 
 		<main>
 			<section class="hero">
