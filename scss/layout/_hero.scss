@@ -6,21 +6,33 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: start;
+		@include breakpoint(small) {
+			flex-direction: column-reverse;
+		}
 	}
-	
+
 	&__left {
 		padding: 8rem 0rem;
 		width: 55rem;
 		max-width: 100%;
+		@include breakpoint(small) {
+			width: 100%;
+			text-align: center;
+		}
 
 		p {
 			padding-top: 3rem;
 			padding-right: 1.5rem;
+			@include breakpoint(small) {
+				padding-right: 0rem;
+			}
 		}
 	}
 
 	&__btns {
 		margin-top: 5rem;
+		@include flex;
+		justify-content: start;
 	}
 
 	&__right {
