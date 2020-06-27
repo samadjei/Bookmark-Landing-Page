@@ -33,6 +33,9 @@
 		margin-top: 5rem;
 		@include flex;
 		justify-content: start;
+		@include breakpoint(medium) {
+			justify-content: center;
+		}
 	}
 
 	&__right {

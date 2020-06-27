@@ -8,6 +8,12 @@
 
 	&__header {
 		@include contentHeader;
+
+		&--description {
+			@include breakpoint(small) {
+				font-size: 1.6rem;
+			}
+		}
 	}
 
 	&__tabs {
@@ -30,13 +36,12 @@
 			}
 		}
 	}
+}
 
-	// *TAB CONTENT
-
-	&__content {
-		p {
-			margin-bottom: 5rem;
-		}
+// *TAB CONTENT
+.tabs {
+	p {
+		margin-bottom: 5rem;
 	}
 }
 
