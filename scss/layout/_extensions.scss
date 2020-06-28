@@ -31,10 +31,18 @@
 
 		&:nth-child(2) {
 			margin-bottom: -5rem;
+			@include breakpoint(medium) {
+				margin: auto;
+				margin-bottom: 5rem;
+			}
 		}
 
 		&:nth-child(3) {
 			margin-bottom: -14rem;
+			@include breakpoint(medium) {
+				margin-bottom: 14rem;
+				margin: auto;
+			}
 		}
 
 		img {
