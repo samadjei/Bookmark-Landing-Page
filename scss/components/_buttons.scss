@@ -39,5 +39,10 @@
 .btn--mobile {
 	background: transparent;
 	border: 2px solid white;
-	
+	margin-top: 2rem;
+
+	&:hover {
+		background: white;
+		border: 2px solid $Soft-Red;
+	}
 }

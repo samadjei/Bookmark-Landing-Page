@@ -75,24 +75,29 @@
 		margin-top: 2.4rem;
 		z-index: 1;
 
-		a {
+		&--items {
 			display: block;
 			color: white;
 			text-align: center;
 			text-transform: uppercase;
 			letter-spacing: 3px;
 			padding: 2rem;
-			border-top: 1px solid $Grayish-Blue;
+
 			&:hover {
 				color: $Soft-Red;
 			}
 		}
 	}
 
+	&__border {
+		border-top: 0.5px solid rgba(145, 148, 161, 0.5);
+		border-bottom: 0.5px solid rgba(145, 148, 161, 0.5);
+	}
+
 	&__socials {
 		@include flex;
 		position: absolute;
-		bottom: 5rem;
+		bottom: 30rem;
 		left: 0;
 		right: 0;
 	}
