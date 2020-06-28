@@ -28,8 +28,15 @@
 		justify-content: center;
 		text-align: center;
 
+		@include breakpoint(small) {
+			grid-template-columns: 1fr;
+		}
+
 		& > div {
 			padding: 1.5rem 0;
+			@include breakpoint(small) {
+				border-top: 1px solid #e0e0ec;
+			}
 
 			&:hover {
 				cursor: pointer;
@@ -39,37 +46,68 @@
 }
 
 // *TAB CONTENT
-.tabs {
+.tab-content {
 	p {
 		margin-bottom: 5rem;
 	}
+	padding-bottom: 20rem;
 }
 
-.tab-content-inner {
-	display: flex;
-	justify-content: space-around;
+.tab-1-content-inner {
+	// @include flex;
+	// justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: start;
 	align-items: center;
-	padding-top: 7rem;
-	padding-bottom: 20rem;
+	grid-gap: 10rem;
+	padding-top: 6rem;
+	@include breakpoint(small) {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.image img {
+	display: block;
+
+	width: 100%;
+	justify-self: center;
+}
+
+.tab-detail {
+	width: 100%;
+	max-width: 43rem;
+	justify-self: center;
+	@include breakpoint(medium) {
+		text-align: center;
+	}
+}
+
+.tab--btn {
+	@include breakpoint(small) {
+		display: none;
+	}
 }
 
 .tab-border {
 	border-bottom: 4px solid $Soft-Red;
+	@include breakpoint(small) {
+		margin-bottom: -1rem;
+	}
 }
 
 // Hide Content initially
+/* Hide initial content */
 #tab-1-content,
 #tab-2-content,
 #tab-3-content {
 	display: none;
+	opacity: 0;
 }
-
 .show {
 	display: block !important;
-}
-
-.tab-content {
-	text-align: left;
-	max-width: 100%;
-	width: 43rem;
+	opacity: 1 !important;
+	transition: all 1000 ease-in;
 }

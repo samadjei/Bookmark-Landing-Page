@@ -36,6 +36,9 @@
 		@include breakpoint(medium) {
 			justify-content: center;
 		}
+		@include breakpoint(small) {
+			font-size: 1.4rem;
+		}
 	}
 
 	&__right {
