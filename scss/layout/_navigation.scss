@@ -4,7 +4,25 @@
 
 	// Hamburger Open Styles
 	&.open {
+		.header__logo {
+			z-index: 2;
+			&--name {
+				fill: white;
+			}
+			&--circle {
+				fill: white;
+			}
+			&--bookmark {
+				fill: rgba(37, 43, 70, 0.9);
+			}
+		}
+
 		.header__toggle {
+			span {
+				background: white;
+				z-index: 2;
+				display: block;
+			}
 			> span:first-child {
 				transform: rotate(45deg);
 			}
@@ -17,6 +35,17 @@
 				transform: rotate(-45deg);
 			}
 		}
+	}
+
+	// Overlay
+	.overlay {
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: rgba(37, 43, 70, 0.9);
+		z-index: 1;
 	}
 
 	// Mobile Menu
@@ -68,16 +97,6 @@
 		right: 0;
 	}
 
-	// .overlay {
-	// 	position: fixed;
-	// 	top: 0rem;
-	// 	right: 0rem;
-	// 	bottom: 0rem;
-	// 	left: 0rem;
-	// 	background: rgba(37, 43, 70, 0.8);
-	// 	opacity: 0.1;
-	// }
-
 	// Desktop Menu
 	&__flex {
 		@include flex;
@@ -109,11 +128,6 @@
 			}
 		}
 	}
-}
-
-// Overlay
-.overlay {
-	background: rgba(37, 43, 70, 0.8);
 }
 
 // Visibility
