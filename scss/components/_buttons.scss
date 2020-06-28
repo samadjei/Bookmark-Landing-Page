@@ -5,13 +5,16 @@
 	cursor: pointer;
 	padding: 1.8rem 2.5rem;
 	background: $Soft-Blue;
+
+	@include breakpoint(small) {
+		padding: 1.5rem 2rem;
+	}
 }
 
 .btn-blue {
 	color: white;
 	transition: all 0.3s ease-out;
 	border: 2px solid $Soft-Blue;
-
 	@include boxShadow;
 
 	&:hover {
@@ -31,4 +34,10 @@
 		border: 2px solid $Very-Dark-Blue;
 		background: white;
 	}
+}
+
+.btn--mobile {
+	background: transparent;
+	border: 2px solid white;
+	
 }

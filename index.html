@@ -10,17 +10,38 @@
 		<title>Frontend Mentor | Bookmark landing page</title>
 	</head>
 	<body>
-		<div class="container">
-			<header class="menu">
-				<img src="images/logo-bookmark.svg" alt="" />
-				<ul class="menu__list">
-					<li>Features</li>
-					<li>Pricing</li>
-					<li>Contact</li>
-					<li>Login</li>
+		<header class="header">
+			<div class="overlay"></div>
+			<nav class="container header__flex">
+				<div>
+					<img src="images/logo-bookmark.svg" alt="Logo" />
+				</div>
+				<a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<!-- Main Menu -->
+				<ul class="header__menu hide-for-mobile">
+					<li class="header__menu--items">Features</li>
+					<li class="header__menu--items">Pricing</li>
+					<li class="header__menu--items">Contact</li>
+					<li class="header__menu--items">Login</li>
 				</ul>
-			</header>
-		</div>
+			</nav>
+			<!-- Mobile Menu  -->
+			<!-- <div class="header__links hide-for-desktop">
+				<a href="#">Features</a>
+				<a href="#">Pricing</a>
+				<a href="#">Contact</a>
+				<a class="btn btn--mobile" href="#">Login</a>
+				<div class="header__socials">
+					<img class="footer__right--img" src="images/icon-facebook.svg" alt="Facebook icon" />
+					<img class="footer__right--img" src="images/icon-twitter.svg" alt="Twitter icon" />
+				</div>
+			</div> -->
+		</header>
 
 		<main>
 			<section class="hero">
@@ -45,7 +66,7 @@
 				<div class="container">
 					<div class="features__header">
 						<h2>Features</h2>
-						<p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+						<p class="features__header--description">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
 					</div>
 					<div class="features__tabs">
 						<div class="features__grid">
@@ -63,10 +84,10 @@
 				</div>
 			</section>
 
-			<section class="features__content">
+			<section class="tabs">
 				<div class="container">
 					<!-- *Tab Content 1 -->
-					<div id="tab-1-content" class="tab-content-item show">
+					<div id="tab-1-content" class="tab__content--item show">
 						<div class="tab-content-inner">
 							<div class="image">
 								<img src="images/illustration-features-tab-1.svg" alt="" />
@@ -80,7 +101,7 @@
 					</div>
 
 					<!-- Tab 2 -->
-					<div id="tab-2-content" class="tab-content-item">
+					<div id="tab-2-content" class="tab__content--item">
 						<div class="tab-content-inner">
 							<div class="image">
 								<img src="images/illustration-features-tab-2.svg" alt="" />
@@ -94,7 +115,7 @@
 					</div>
 
 					<!-- Tab 3 -->
-					<div id="tab-3-content" class="tab-content-item">
+					<div id="tab-3-content" class="tab__content--item">
 						<div class="tab-content-inner">
 							<div class="image">
 								<img src="images/illustration-features-tab-3.svg" alt="" />
