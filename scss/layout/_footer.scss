@@ -1,33 +1,60 @@
 .footer {
-  background-color: $Very-Dark-Blue;
-  padding: 4rem 0;
+	background-color: $Very-Dark-Blue;
+	padding: 4rem 0;
 
 	&__flex {
-    @include flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  &__left {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+		@include flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include breakpoint(medium) {
+			flex-direction: column;
+		}
+	}
 
-  }
+	&__left {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include breakpoint(medium) {
+			grid-template-columns: 1fr;
+			grid-gap: 4rem;
+		}
+	}
 
-  &__listing {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    grid-gap: 2rem;
-    &--items {
-      color: white;
-      text-transform: uppercase;
-    }
-  }
+	&__listing {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		grid-gap: 2rem;
+		@include breakpoint(medium) {
+			grid-template-columns: 1fr;
+			justify-self: center;
+			grid-gap: 4rem;
+		}
+		&--items {
+			color: white;
+			text-transform: uppercase;
+			&:hover {
+				color: $Soft-Red;
+				cursor: pointer;
+			}
+		}
+	}
 
-  &__right {
-    &--img:last-child {
-      padding-left: 3rem;
-    }
-  }
+	&__right {
+		display: flex;
+		align-items: center;
+		@include breakpoint(medium) {
+			padding-top: 4rem;
+		}
+
+		&--icons {
+			&:hover {
+				fill: $Soft-Red;
+			}
+		}
+
+		&--img:first-child {
+			padding-right: 3rem;
+		}
+	}
 }
