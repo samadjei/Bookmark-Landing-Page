@@ -26,12 +26,19 @@
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+
+		@include breakpoint(small) {
+			flex-direction: column;
+		}
 		&--input {
 			padding: 1.5rem 2rem;
 			border-radius: 5px;
 			outline: none;
 			border: none;
 			flex: 0.7;
+			@include breakpoint(medium) {
+				width: 100%;
+			}
 
 			&::placeholder {
 				color: $Grayish-Blue;
@@ -49,6 +56,17 @@
 			background-color: $Soft-Red;
 			color: white;
 			margin-left: 2rem;
+
+			&:hover {
+				background: white;
+				color: $Soft-Red;
+			}
+
+			@include breakpoint(small) {
+				width: 100%;
+				margin-top: 1.5rem;
+				margin-left: 0rem;
+			}
 		}
 	}
 }
