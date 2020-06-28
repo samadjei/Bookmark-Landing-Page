@@ -1,3 +1,22 @@
+// Hamburger Menu
+const btnHamburger = document.querySelector('#btnHamburger');
+const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
+const body = document.querySelector('body');
+
+btnHamburger.addEventListener('click', () => {
+	if (header.classList.contains('open')) {
+		//Close hamburger menu
+		body.classList.remove('noscroll');
+		header.classList.remove('open');
+	} else {
+		//Open hamburger menu
+		body.classList.add('noscroll');
+		header.classList.add('open');
+	}
+});
+
+// *TABS
 const tabItems = document.querySelectorAll('.tab-item');
 const tabContentItems = document.querySelectorAll('.tab__content--item');
 
@@ -25,22 +44,3 @@ function removeShow() {
 
 // Listen for tab click
 tabItems.forEach((item) => item.addEventListener('click', selectItem));
-
-
-// Hamburger Menu
-const btnHamburger = document.querySelector('#btnHamburger');
-const header = document.querySelector('.header');
-const overlay = document.querySelector('.overlay');
-const body = document.querySelector('body');
-
-btnHamburger.addEventListener('click', function () {
-	if (header.classList.contains('open')) {
-		//Close hamburger menu
-		body.classList.remove('noscroll');
-		header.classList.remove('open');
-	} else {
-		//Open hamburger menu
-		body.classList.add('noscroll');
-		header.classList.add('open');
-	}
-});
