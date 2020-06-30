@@ -57,11 +57,23 @@
 
 /* Tab Content */
 .tab-content {
+	padding-bottom: 20rem;
+}
+
+.tab-detail {
+	width: 100%;
+	max-width: 43rem;
+	justify-self: center;
 	p {
 		margin-bottom: 5rem;
 		text-align: left;
+		@include breakpoint(small) {
+			text-align: center;
+		}
 	}
-	padding-bottom: 20rem;
+	@include breakpoint(medium) {
+		text-align: center;
+	}
 }
 
 /* Hide initial content */
@@ -89,15 +101,6 @@
 		grid-template-columns: 1fr;
 		justify-content: center;
 		align-items: center;
-	}
-}
-
-.tab-detail {
-	width: 100%;
-	max-width: 43rem;
-	justify-self: center;
-	@include breakpoint(medium) {
-		text-align: center;
 	}
 }
 
