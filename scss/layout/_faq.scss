@@ -4,27 +4,52 @@
 		@include contentHeader;
 	}
 
+	&__content {
+		border-top: 1px solid #e0e0ec;
+		border-bottom: 1px solid #e0e0ec;
+	}
+
 	&__title {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-top: 1px solid #e0e0ec;
-		border-bottom: 1px solid #e0e0ec;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		padding-right: 0.5rem;
-	}
 
-	&__text {
-		display: none;
+		&:hover {
+			h4 {
+				color: $Soft-Red;
+			}
+			.toggle {
+				color: $Soft-Red;
+			}
+			cursor: pointer;
+		}
 	}
 
 	&--btn {
 		margin-top: 5rem;
 	}
+
+	&__text {
+		text-align: left;
+		padding-bottom: 2rem;
+	}
 }
 
-svg:hover {
-	fill: $Soft-Red;
-	cursor: pointer;
+.question-text {
+	display: none;
+}
+.show-text .question-text {
+	display: block;
+}
+
+.toggle {
+	color: $Soft-Blue;
+}
+
+.up {
+	transform: rotate(-180deg);
+	transition: all 0.3s ease-in;
 }

@@ -1,4 +1,4 @@
-// Hamburger Menu
+// *Hamburger Menu
 const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
@@ -62,3 +62,42 @@ function removeShow() {
 tabItems.forEach((item) => {
 	item.addEventListener('click', selectItem);
 });
+
+// *FAQ
+// Using selectors inside the element
+const questions = document.querySelectorAll('.faq__content');
+
+questions.forEach(function (question) {
+	const arrow = question.querySelector('.toggle');
+	arrow.addEventListener('click', function () {
+		questions.forEach(function (item) {
+			if (item !== question) {
+				item.classList.remove('show-text');
+			}
+		});
+		question.classList.toggle('show-text');
+	});
+});
+
+// *CONTACT
+const form = document.querySelector('.contact__form');
+const email = document.querySelector('.email');
+
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const emailValidate = email.value;
+
+	// check if it is a valid email
+	if (!validateEmail(emailValidate)) {
+		form.classList.add('error');
+		form.classList.remove('success');
+	} else {
+		form.classList.remove('error');
+		form.classList.add('success');
+	}
+});
+
+function validateEmail(email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+}
