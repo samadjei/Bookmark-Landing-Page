@@ -20,10 +20,14 @@
 	outline: none;
 	cursor: pointer;
 	background: transparent;
+
+	font-weight: 400;
+	color: $Very-Dark-Blue;
+	font-size: 1.8rem;
 }
 
 .accordion__button:hover {
-	color: red;
+	color: $Soft-Red;
 }
 
 .accordion__button--active + .accordion__content {
@@ -31,7 +35,7 @@
 }
 
 .accordion__button--active {
-	colour: $Soft-Red;
+	color: $Soft-Red;
 }
 
 .accordion__button--active i {
