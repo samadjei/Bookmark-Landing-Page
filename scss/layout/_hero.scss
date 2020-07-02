@@ -56,4 +56,15 @@
 	border-radius: 30rem 0 0 30rem;
 	background-color: $Soft-Blue;
 	z-index: -1;
+
+	@include breakpoint(medium) {
+		top: 10rem;
+		height: 40%;
+		width: 80%;
+	}
+
+	@include breakpoint(small) {
+		height: 30%;
+		top: 5rem;
+	}
 }

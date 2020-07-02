@@ -2,7 +2,7 @@
 	margin-top: 8rem;
 
 	.container .features__tabs {
-		width: 70%;
+		width: 60%;
 		margin: 0 auto;
 	}
 
@@ -58,6 +58,7 @@
 /* Tab Content */
 .tab-content {
 	padding-bottom: 20rem;
+	position: relative;
 }
 
 .tab-detail {
@@ -93,7 +94,7 @@
 .tab-content-inner {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	justify-content: start;
+	justify-items: center;
 	align-items: center;
 	grid-gap: 10rem;
 	padding-top: 6rem;
@@ -107,5 +108,27 @@
 .tab--btn {
 	@include breakpoint(small) {
 		display: none;
+	}
+}
+
+.feature-bg {
+	position: absolute;
+	top: 15rem;
+	bottom: 0;
+	left: 0;
+	width: 35%;
+	height: 60%;
+	border-radius: 0 30rem 30rem 0;
+	background-color: $Soft-Blue;
+	z-index: -1;
+
+	@include breakpoint(medium) {
+		height: 36%;
+		width: 80%;
+		top: 13rem;
+	}
+
+	@include breakpoint(small) {
+		height: 30%;
 	}
 }
