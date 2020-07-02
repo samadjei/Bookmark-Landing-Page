@@ -75,12 +75,18 @@
 
 form.error input {
 	border: 2px solid #f96262;
+	border-bottom-width: 2.5rem;
 }
 
 .error-icon {
 	display: none;
 	position: absolute;
 	right: 15rem;
+	bottom: 3.5rem;
+	@include breakpoint(small) {
+		right: 2rem;
+		bottom: 9.5rem;
+	}
 }
 
 form.error .error-icon {
@@ -89,7 +95,8 @@ form.error .error-icon {
 
 small {
 	display: none;
-	color: red;
+	font-style: italic;
+	color: white;
 	position: absolute;
 	top: 5rem;
 	left: 2rem;
