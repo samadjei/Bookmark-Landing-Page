@@ -3,53 +3,54 @@
 	&__questions {
 		@include contentHeader;
 	}
-
-	&__content {
-		border-top: 1px solid #e0e0ec;
-		border-bottom: 1px solid #e0e0ec;
-	}
-
-	&__title {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-		padding-right: 0.5rem;
-
-		&:hover {
-			h4 {
-				color: $Soft-Red;
-			}
-			.toggle {
-				color: $Soft-Red;
-			}
-			cursor: pointer;
-		}
-	}
-
-	&--btn {
-		margin-top: 5rem;
-	}
-
-	&__text {
-		text-align: left;
-		padding-bottom: 2rem;
-	}
 }
 
-.question-text {
-	display: none;
+.accordion {
+	border-top: 1px solid #e0e0ec;
+	border-bottom: 1px solid #e0e0ec;
 }
-.show-text .question-text {
+
+.accordion__button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+.accordion__button:hover {
+	color: red;
+}
+
+.accordion__button--active + .accordion__content {
 	display: block;
 }
 
-.toggle {
-	color: $Soft-Blue;
+.accordion__button--active {
+	colour: $Soft-Red;
 }
 
-.up {
-	transform: rotate(-180deg);
-	transition: all 0.3s ease-in;
+.accordion__button--active i {
+	transform: rotate(180deg);
+}
+
+.accordion__content {
+	padding: 0 15px;
+	border-bottom: 1px solid #e0e0ec;
+
+	display: none;
+	overflow: auto;
+}
+
+.accordion__content--text {
+	text-align: left;
+	padding-bottom: 2rem;
+}
+
+.faq--btn {
+	margin-top: 4rem;
 }

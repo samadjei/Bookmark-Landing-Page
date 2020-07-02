@@ -64,18 +64,12 @@ tabItems.forEach((item) => {
 });
 
 // *FAQ
-// Using selectors inside the element
-const questions = document.querySelectorAll('.faq__content');
 
-questions.forEach(function (question) {
-	const arrow = question.querySelector('.toggle');
-	arrow.addEventListener('click', function () {
-		questions.forEach(function (item) {
-			if (item !== question) {
-				item.classList.remove('show-text');
-			}
-		});
-		question.classList.toggle('show-text');
+const toggle = document.querySelectorAll('.accordion__button');
+
+toggle.forEach((button) => {
+	button.addEventListener('click', () => {
+		button.classList.toggle('accordion__button--active');
 	});
 });
 
